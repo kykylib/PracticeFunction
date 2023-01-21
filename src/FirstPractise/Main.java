@@ -15,7 +15,7 @@ public class Main {
                 Optional.ofNullable(petard)
                         .filter(currentPetard -> currentPetard.getPowder() > 10)
                         .filter(currentPetard -> currentPetard.getLength().equals("Short"))
-                        .ifPresent(currentPetard -> filteredListOfPetard.add(petard));
+                        .ifPresent(filteredListOfPetard::add);
             }
             return filteredListOfPetard;
         };
